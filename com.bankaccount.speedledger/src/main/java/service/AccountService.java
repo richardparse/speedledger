@@ -1,10 +1,13 @@
 package service;
 
+import com.mongodb.MongoClient;
+import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.Morphia;
+
+
 public class AccountService {
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-    }
+   MongoClient client = new MongoClient("localhost", 27017);
+   Datastore datastore = new Morphia().createDatastore(client, "bankAccount");
 
 }
