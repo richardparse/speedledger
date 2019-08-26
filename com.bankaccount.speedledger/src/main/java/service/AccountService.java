@@ -3,7 +3,9 @@ package service;
 import com.bankaccount.com.bankaccount.speedledger.BankAccount;
 import com.mongodb.MongoClient;
 
-import java.awt.List;
+
+
+import java.util.List;
 
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
@@ -18,10 +20,10 @@ public class AccountService {
         return "add new account";
     }
 
-    public List getAllAccounts() {
-         java.util.List<BankAccount> list = datastore.find(BankAccount.class).asList();
+    public List<BankAccount> getAllAccounts() {
+       List<BankAccount> list = datastore.find(BankAccount.class).asList();
         if (list != null) {
-            return (List) list;
+            return list;
         }
         return null;
     }
