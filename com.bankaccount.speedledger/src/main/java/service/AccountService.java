@@ -1,13 +1,28 @@
 package service;
 
+import com.bankaccount.com.bankaccount.speedledger.BankAccount;
 import com.mongodb.MongoClient;
+
+import java.awt.List;
+
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
-
 public class AccountService {
 
-   MongoClient client = new MongoClient("localhost", 27017);
-   Datastore datastore = new Morphia().createDatastore(client, "bankAccount");
+    MongoClient client = new MongoClient("localhost", 27017);
+    Datastore datastore = new Morphia().createDatastore(client, "bankAccount");
 
+    public String addaccount(BankAccount account) {
+        datastore.save(account);
+        return "add new account";
+    }
+
+    public List getAllAccounts() {
+         java.util.List<BankAccount> list = datastore.find(BankAccount.class).asList();
+        if (list != null) {
+            return (List) list;
+        }
+        return null;
+    }
 }
