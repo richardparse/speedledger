@@ -17,7 +17,7 @@ public class AccountService {
 
     public String addaccount(BankAccount account) {
         datastore.save(account);
-        return "add new account";
+        return "add account";
     }
 
     public List<BankAccount> getAllAccounts() {

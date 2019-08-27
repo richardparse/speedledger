@@ -22,7 +22,7 @@ public class BankAccount {
     }
 
     public BankAccount(String number, String name, Double balance, Boolean creditCard, Boolean synthetic) {
-
+        
         this.number = number;
         this.name = name;
         this.balance = balance;
