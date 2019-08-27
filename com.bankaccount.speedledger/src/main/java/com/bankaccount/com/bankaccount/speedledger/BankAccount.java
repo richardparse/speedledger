@@ -13,9 +13,9 @@ public class BankAccount {
     private ObjectId id;
     private String number;
     private String name;
-    private Double balance;
+    public Double balance;
     private Boolean creditCard;
-    private Boolean synthetic;
+    public Boolean synthetic;
 
     public BankAccount() {
 

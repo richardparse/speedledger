@@ -20,10 +20,14 @@ public class Api {
             return accountservice.addaccount(bankAccount);
         }, gson::toJson);
 
-        get("/", (req, res) -> {
+        get("/bankaccounts", (req, res) -> {
             res.type("application/json");
             return accountservice.getAllAccounts();
         }, gson::toJson);
-
+        
+        get("/bankaccounts/default", (req, res) -> {
+            res.type("application/json");
+            return accountservice.getDefaultAccounts();
+        }, gson::toJson);
     }
 }
