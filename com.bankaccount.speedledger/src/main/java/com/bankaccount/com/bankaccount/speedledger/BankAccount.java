@@ -13,16 +13,16 @@ public class BankAccount {
     private ObjectId id;
     private String number;
     private String name;
-    private Double balance;
+    public Double balance;
     private Boolean creditCard;
-    private Boolean synthetic;
+    public Boolean synthetic;
 
     public BankAccount() {
 
     }
 
     public BankAccount(String number, String name, Double balance, Boolean creditCard, Boolean synthetic) {
-
+        
         this.number = number;
         this.name = name;
         this.balance = balance;

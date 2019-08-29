@@ -9,7 +9,7 @@ import static spark.Spark.post;
 
 public class Api {
 
-  public static AccountService accountservice = new AccountService();
+    public static AccountService accountservice = new AccountService();
 
     public static void main(String[] args) {
         final Gson gson = new Gson();
@@ -19,11 +19,15 @@ public class Api {
             BankAccount bankAccount = gson.fromJson(req.body(), BankAccount.class);
             return accountservice.addaccount(bankAccount);
         }, gson::toJson);
-        
-        get("/", (req,res)->{
+
+        get("/bankaccounts", (req, res) -> {
             res.type("application/json");
             return accountservice.getAllAccounts();
-        }, gson ::toJson);
+        }, gson::toJson);
         
+        get("/bankaccounts/default", (req, res) -> {
+            res.type("application/json");
+            return accountservice.getDefaultAccounts();
+        }, gson::toJson);
     }
 }
