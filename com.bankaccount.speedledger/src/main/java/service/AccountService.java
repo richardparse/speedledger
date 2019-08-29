@@ -2,11 +2,7 @@ package service;
 
 import com.bankaccount.com.bankaccount.speedledger.BankAccount;
 import com.mongodb.MongoClient;
-
-
-
 import java.util.List;
-
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
 
@@ -31,9 +27,11 @@ public class AccountService extends BankAccount {
     public List<BankAccount> getDefaultAccounts() {
         List<BankAccount> list = datastore.find(BankAccount.class).asList();
         if (list != null) {
-            if (synthetic == false && balance >= 0) {
+            if (synthetic == false) {
+                if (balance >= 0) {
+            
                 return list;
-            }
+            }}
             return null;
         }
         return null;
