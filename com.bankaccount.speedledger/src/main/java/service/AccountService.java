@@ -66,7 +66,7 @@ public class AccountService extends BankAccount {
 
         BigDecimal two = new BigDecimal("2");
         // half of the highest value
-        BigDecimal metadeValorMaior = highestBalanceBankAccount.getBalance().divide(two);
+        BigDecimal halfGreatesAmount = highestBalanceBankAccount.getBalance().divide(two);
         return highestBalanceBankAccount;
     }
 }
