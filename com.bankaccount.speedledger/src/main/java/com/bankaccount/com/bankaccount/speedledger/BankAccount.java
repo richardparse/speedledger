@@ -1,5 +1,7 @@
 package com.bankaccount.com.bankaccount.speedledger;
 
+import java.math.BigDecimal;
+
 import org.bson.types.ObjectId;
 
 import org.mongodb.morphia.annotations.Entity;
@@ -13,7 +15,7 @@ public class BankAccount {
     private ObjectId id;
     private String number;
     private String name;
-    public Double balance;
+    public BigDecimal balance;
     private Boolean creditCard;
     public Boolean synthetic;
 
@@ -21,7 +23,7 @@ public class BankAccount {
 
     }
 
-    public BankAccount(String number, String name, Double balance, Boolean creditCard, Boolean synthetic) {
+    public BankAccount(String number, String name, BigDecimal balance, Boolean creditCard, Boolean synthetic) {
         
         this.number = number;
         this.name = name;
@@ -37,5 +39,15 @@ public class BankAccount {
 
     public void setId(ObjectId id) {
         this.id = id;
+    }
+
+    public BigDecimal getBalance() {
+      
+        return balance;
+    }
+
+    public boolean isSynthetic() {
+      
+        return synthetic;
     }
 }
