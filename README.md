@@ -6,7 +6,7 @@ This project is a RestFul API, with two endpoints /bankaccounts and /defaultacco
 -  Adding Bank Accounts;
 -  List Default BankAccounts.
 
-Build with the following tools:
+Built with the following tools:
 
 - Eclipse;
 - Spark Framework;
