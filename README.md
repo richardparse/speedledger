@@ -1,8 +1,9 @@
-Speed Ledger Bank Account API
+# Speed Ledger Bank Account API
 
-This project is a RestFul API, with two endpoints performing the following CRUD operations:
+This project is a RestFul API, with two endpoints /bankaccounts and /defaultaccounts performing the following CRUD operations:
 
--  List of Bank accounts;
+-  List Bank accounts;
+-  Adding Bank Accounts;
 -  List Default BankAccounts.
 
 Build with the following tools:
