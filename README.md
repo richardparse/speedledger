@@ -23,3 +23,5 @@ Built with the following tools:
 - JUnit;
 - MongoDB;
 - Node.JS
+
+Unit tests will be added soon.
